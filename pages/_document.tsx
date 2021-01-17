@@ -41,6 +41,7 @@ export default class MyDocument extends Document {
       <Html lang="en">
         {patchSharing()}
         <script src="http://localhost:3010/_next/static/remoteEntryMerged.js" />
+        <script src="http://localhost:3011/_next/static/remoteEntryMerged.js" />
         <Head>
           <meta charSet="utf-8" />
         </Head>

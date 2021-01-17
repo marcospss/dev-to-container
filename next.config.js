@@ -18,7 +18,13 @@ module.exports = {
               __dirname,
               "../dev-to-collections/.next/server/static/runtime/remoteEntry.js"
             )
-          : "collections", // for client, treat it as a global
+          : "collections", // for client, treat it as a global,
+          article: isServer
+          ? path.resolve(
+              __dirname,
+              "../dev-to-article/.next/server/static/runtime/remoteEntry.js"
+            )
+          : "article", // for client, treat it as a global
       },
       exposes: {},
       shared: [],
