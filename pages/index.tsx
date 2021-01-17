@@ -6,6 +6,8 @@ import theme from '~/application/styles/theme';
 import Head from '~/infrastructure/layout/Head';
 import Footer from '~/infrastructure/layout/Footer';
 
+const Articles = (await import('collections/Articles')).default;
+
 const IndexPage: NextPage = () => {
   return (
     <ThemeProvider theme={theme}>
@@ -15,6 +17,7 @@ const IndexPage: NextPage = () => {
         <h1>
           Welcome to <a href="https://nextjs.org">Next.js TypeScript!</a>
         </h1>
+        <Articles />
       </main>
       <Footer />
     </ThemeProvider>
