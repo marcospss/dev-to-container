@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 import React from 'react';
 import Document, {
   DocumentInitialProps,
@@ -43,7 +44,8 @@ export default class MyDocument extends Document {
         <script async src="http://localhost:3010/_next/static/remoteEntryMerged.js" />
         <script async src="http://localhost:3011/_next/static/remoteEntryMerged.js" />
         <Head>
-          <link rel="preconnect" href="https://dev.to/" as="fetch" />
+          <link rel="dns-prefetch" href="https://dev.to/" />
+          <link rel="preconnect" href="https://dev.to/" />
         </Head>
         <body>
           <Main />
