@@ -40,10 +40,10 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         {patchSharing()}
-        <script src="http://localhost:3010/_next/static/remoteEntryMerged.js" />
-        <script src="http://localhost:3011/_next/static/remoteEntryMerged.js" />
+        <script async src="http://localhost:3010/_next/static/remoteEntryMerged.js" />
+        <script async src="http://localhost:3011/_next/static/remoteEntryMerged.js" />
         <Head>
-          <meta charSet="utf-8" />
+          <link rel="preconnect" href="https://dev.to/" as="fetch" />
         </Head>
         <body>
           <Main />

@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
   /**
@@ -689,4 +689,68 @@ a {
   }
 
 }
+`;
+
+export const Container = styled.div`
+  width: 100%;
+  display: flex;
+  margin: 0px auto;
+  padding: 0px 2rem;
+  @media (min-width: 768px) {
+    width: 750px;
+  }
+  @media (min-width: 992px) {
+    width: 970px;
+  }
+  @media (min-width: 1200px) {
+    width: 1170px;
+  }
+`;
+
+export const GridList = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 1rem;
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1rem;
+  }
+  @media (min-width: 992px) {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1rem;
+  }
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 1rem;
+  }
+`;
+
+export const SectionTitleSecondary = styled.h2`
+  padding: 2px 0;
+  font-weight: 700;
+  font-size: 24px;
+  border-left: 5px solid ${({ theme: { colors } }) => colors.gray};
+  position: relative;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  span {
+    padding-left: 18px;
+    z-index: 1;
+    position: relative;
+    padding-right: 18px;
+    color: #001936;
+    font-size: 24px;
+    font-weight: 900;
+    background-color: ${({ theme: { colors } }) => colors.grayLight};
+  }
+  &::after {
+    content: '';
+    width: 100%;
+    height: 0px;
+    border-bottom: 1px solid ${({ theme: { colors } }) => colors.gray};
+    position: absolute;
+    display: block;
+    top: 12px;
+    right: 0;
+  }
 `;
